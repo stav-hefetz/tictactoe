@@ -1,5 +1,7 @@
 import random
-
+# two mistakes:
+# no input filter, errors keep popping up while inputing #
+#second,no printing explained what to input #
 X = "X"
 O = "O"
 EMPTY = "*"
@@ -28,14 +30,14 @@ def create_board(size: int) -> Board:
         board.append(row)
     return board
 
-
+#this function checks the row number #
 def check_rows(board, player):
     for row in board:
         if row.count(player) == len(row):
             return True
     return False
 
-
+#this function checks the column number
 def check_columns(board, player):
     for i, row in enumerate(board):
         marks = 0
